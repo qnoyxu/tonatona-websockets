@@ -1,0 +1,116 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 71867839a146cecc65c06187732591d65910f8ab5e476176d54ea5251deab279
+
+name:           tonatona-websockets
+version:        0.1.0.0
+category:       Library
+homepage:       https://github.com/qnoyxu/tonatona-websockets#readme
+bug-reports:    https://github.com/qnoyxu/tonatona-websockets/issues
+author:         Tomone Akashi
+maintainer:     akashiz2224@gmail.com
+copyright:      2021 Tomone Akashi
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/qnoyxu/tonatona-websockets
+
+library
+  exposed-modules:
+      Tonatona.Servant.WebSockets
+      Tonatona.Wai.WebSockets
+      Tonatona.WebSockets
+  other-modules:
+      Paths_tonatona_websockets
+  hs-source-dirs:
+      src
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse DuplicateRecordFields EmptyDataDecls ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns NoImplicitPrelude OverloadedStrings PartialTypeSignatures PatternGuards PolyKinds RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TupleSections TypeFamilies TypeSynonymInstances ViewPatterns
+  ghc-options: -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <4.15
+    , data-default >=0.7 && <0.8
+    , exceptions >=0.8 && <0.11
+    , http-types >=0.12 && <0.13
+    , monad-logger >=0.3 && <0.4
+    , rio >=0.1 && <0.2
+    , servant >=0.13 && <0.17
+    , servant-server >=0.13 && <0.17
+    , tonaparser >=0.1 && <0.2
+    , tonatona >=0.1 && <0.2
+    , tonatona-logger >=0.1 && <0.3
+    , tonatona-servant >=0.1 && <0.2
+    , wai >=3.2 && <3.3
+    , wai-extra >=3.0.27 && <3.1
+    , wai-websockets >=3.0 && <3.1
+    , warp >=3.2 && <3.4
+    , websockets >=0.12 && <0.13
+  default-language: Haskell2010
+
+test-suite doctest
+  type: exitcode-stdio-1.0
+  main-is: DocTest.hs
+  hs-source-dirs:
+      test
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse DuplicateRecordFields EmptyDataDecls ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns NoImplicitPrelude OverloadedStrings PartialTypeSignatures PatternGuards PolyKinds RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TupleSections TypeFamilies TypeSynonymInstances ViewPatterns
+  ghc-options: -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      Glob
+    , base >=4.7 && <4.15
+    , data-default >=0.7 && <0.8
+    , doctest
+    , exceptions >=0.8 && <0.11
+    , http-types >=0.12 && <0.13
+    , monad-logger >=0.3 && <0.4
+    , rio >=0.1 && <0.2
+    , servant >=0.13 && <0.17
+    , servant-server >=0.13 && <0.17
+    , tonaparser >=0.1 && <0.2
+    , tonatona >=0.1 && <0.2
+    , tonatona-logger >=0.1 && <0.3
+    , tonatona-servant >=0.1 && <0.2
+    , tonatona-websockets
+    , wai >=3.2 && <3.3
+    , wai-extra >=3.0.27 && <3.1
+    , wai-websockets >=3.0 && <3.1
+    , warp >=3.2 && <3.4
+    , websockets >=0.12 && <0.13
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse DuplicateRecordFields EmptyDataDecls ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns NoImplicitPrelude OverloadedStrings PartialTypeSignatures PatternGuards PolyKinds RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TupleSections TypeFamilies TypeSynonymInstances ViewPatterns
+  ghc-options: -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <4.15
+    , data-default >=0.7 && <0.8
+    , exceptions >=0.8 && <0.11
+    , hspec
+    , http-types >=0.12 && <0.13
+    , monad-logger >=0.3 && <0.4
+    , rio >=0.1 && <0.2
+    , servant >=0.13 && <0.17
+    , servant-server >=0.13 && <0.17
+    , tonaparser >=0.1 && <0.2
+    , tonatona >=0.1 && <0.2
+    , tonatona-logger >=0.1 && <0.3
+    , tonatona-servant >=0.1 && <0.2
+    , tonatona-websockets
+    , wai >=3.2 && <3.3
+    , wai-extra >=3.0.27 && <3.1
+    , wai-websockets >=3.0 && <3.1
+    , warp >=3.2 && <3.4
+    , websockets >=0.12 && <0.13
+  default-language: Haskell2010
