@@ -2,7 +2,6 @@
 module Tonatona.WebSockets
   ( ServerApp
   , runServer
-  , runServerWith
   , runServerWithOptions
   , acceptRequest
   , acceptRequestWith
@@ -40,12 +39,12 @@ type ServerApp env = WS.PendingConnection -> RIO env ()
 
 
 runServer :: String -> Int -> ServerApp env -> RIO env ()
-runServer host port = runServerWith host port WS.defaultConnectionOptions
-
-
-runServerWith :: String -> Int -> WS.ConnectionOptions -> ServerApp env -> RIO env ()
-runServerWith host port opts server =
-  withRunInIO $ \run -> WS.runServerWith host port opts (run . server)
+runServer host port =
+  runServerWithOptions
+    WS.defaultServerOptions
+      { WS.serverHost = host
+      , WS.serverPort = port
+      }
 
 
 runServerWithOptions :: WS.ServerOptions -> ServerApp env -> RIO env ()

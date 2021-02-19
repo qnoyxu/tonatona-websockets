@@ -6,6 +6,11 @@ extra-deps:
   - tonatona-0.1.0.0
   - tonatona-servant-0.1.0.3
   - tonatona-logger-0.2.0.0
+  - async-2.2.3@sha256:0cbefb8247308b38e397e675f832b9bd5317ff1872001d5358f213654423c55b,2920
+  - clock-0.8.2@sha256:473ffd59765cc67634bdc55b63c699a85addf3a024089073ec2a862881e83e2a,4313
+  - streaming-commons-0.2.2.1@sha256:28abce35b48dcfb871926dad4cb37bdf737372892b4e5222abc97ca31f2ac738,5159
+  - wai-extra-3.0.32@sha256:7a9e65c4555e1b937dc788b8ba249dbacd4f36840c60581bc27115a5c4a48079,7044
+  - websockets-0.12.7.2@sha256:5a6a3e40ee0c4e6b2cdc573a332ba4a06bb115b97b58147ed3fb005e3ede5ede,7976
 
 flags: {}
 extra-package-dbs: []

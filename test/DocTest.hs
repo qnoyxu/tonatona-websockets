@@ -1,6 +1,6 @@
 module Main (main) where
 
-import Tonalude
+import RIO
 
 import System.FilePath.Glob (glob)
 import Test.DocTest (doctest)
@@ -27,7 +27,6 @@ ghcExtensions =
     , "-XDeriveGeneric"
     , "-XDeriveTraversable"
     , "-XDoAndIfThenElse"
-    , "-XDuplicateRecordFields"
     , "-XEmptyDataDecls"
     , "-XExistentialQuantification"
     , "-XFlexibleContexts"
