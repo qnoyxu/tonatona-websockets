@@ -24,8 +24,8 @@ import Servant
 
 
 
-{-| Run Servant server with WebSocket server.
- -}
+-- | Run Servant server with WebSocket server.
+-- This replaces @Tonatona.Servant.run@.
 run ::
      forall (api :: Type) env.
      (HasServer api '[], HasConfig env TonaServant.Config, HasConfig env TonaLogger.Config)
