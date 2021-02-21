@@ -4,7 +4,7 @@ module Tonatona.Wai.WebSockets
 
 import RIO
 
-import qualified Tonatona.WebSockets as TonaWebSockets
+import qualified Tonatona.WebSockets.Unlift as TonaWebSockets
 
 import Network.Wai
 import qualified Network.Wai.Handler.WebSockets as WWS

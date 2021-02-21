@@ -12,7 +12,7 @@ import Tonatona (HasConfig(..))
 import qualified Tonatona.Logger as TonaLogger
 import qualified Tonatona.Servant as TonaServant
 import Tonatona.Wai.WebSockets (webSocketsOr)
-import qualified Tonatona.WebSockets as TonaWebSockets
+import qualified Tonatona.WebSockets.Unlift as TonaWebSockets
 
 import Data.Default (def)
 import Data.Kind (Type)

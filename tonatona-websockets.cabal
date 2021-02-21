@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 23f69a8b1a08628e2cc55fee7904a0fb2fb006b62cb509569b0b66babd075ede
+-- hash: 585fdab748dc9ecf1543ace963c910ebb132156d3a3cb621cfe0a8111eac8181
 
 name:           tonatona-websockets
 version:        0.1.0.0
@@ -26,10 +26,11 @@ source-repository head
 
 library
   exposed-modules:
-      Tonatona.Servant.WebSockets
-      Tonatona.Wai.WebSockets
       Tonatona.WebSockets
   other-modules:
+      Tonatona.Servant.WebSockets
+      Tonatona.Wai.WebSockets
+      Tonatona.WebSockets.Unlift
       Paths_tonatona_websockets
   hs-source-dirs:
       src

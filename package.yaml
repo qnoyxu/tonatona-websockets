@@ -76,8 +76,6 @@ library:
   source-dirs:
     - src
   exposed-modules:
-    - Tonatona.Servant.WebSockets
-    - Tonatona.Wai.WebSockets
     - Tonatona.WebSockets
 
 tests:
